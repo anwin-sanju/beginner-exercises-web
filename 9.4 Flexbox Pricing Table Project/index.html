@@ -13,20 +13,21 @@
 
     .pricing-container {
       display: flex;
-      gap: 2rem;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      gap: 2rem;
     }
 
     .pricing-plan {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
       background-color: #f2f2f2;
       border-radius: 5px;
-      padding: 20px;
-      flex: 1;
       text-align: center;
-      max-width: 400px;
     }
+
     .plan-title {
       font-size: 24px;
       font-weight: bold;
@@ -56,9 +57,12 @@
       border-radius: 5px;
       border: none;
     }
-    /* Hint: What can you do with a media query and flexbox? */
+
     @media (max-width: 1250px) {
-      
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
     }
   </style>
 </head>
